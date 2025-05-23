@@ -1,0 +1,48 @@
+{
+  "sessions": [
+    {
+      "timestamp": "2025-05-20 20:40:08",
+      "topic": "",
+      "difficulty": "Medium",
+      "question": "What are the most significant developments in  in recent years?",
+      "transcript": "The most significant developments in recent years are artificial intelligence.",
+      "grammar_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "pronunciation_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "comparison_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "rating": 2.1
+    },
+    {
+      "timestamp": "2025-05-20 20:40:37",
+      "topic": "",
+      "difficulty": "Medium",
+      "question": "What are the most significant developments in  in recent years?",
+      "transcript": "The most significant developments in recent years are artificial intelligence.",
+      "grammar_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "pronunciation_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "comparison_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "rating": 2.1
+    },
+    {
+      "timestamp": "2025-05-20 20:43:13",
+      "topic": "",
+      "difficulty": "Medium",
+      "question": "What are the most significant developments in  in recent years?",
+      "transcript": "The most significant developments in recent years are artificial intelligence.",
+      "grammar_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "pronunciation_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "comparison_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "rating": 2.1
+    },
+    {
+      "timestamp": "2025-05-20 20:43:46",
+      "topic": "",
+      "difficulty": "Medium",
+      "question": "What are the most significant developments in  in recent years?",
+      "transcript": "The most significant developments in recent years are artificial intelligence.",
+      "grammar_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "pronunciation_feedback": "\u2705 Your speech was clear!",
+      "comparison_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "rating": 2.1
+    }
+  ]
+}

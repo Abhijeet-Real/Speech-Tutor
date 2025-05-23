@@ -1,0 +1,15 @@
+{
+  "sessions": [
+    {
+      "timestamp": "2025-05-20 20:37:30",
+      "topic": "",
+      "difficulty": null,
+      "question": null,
+      "transcript": "The most significant development in recent years are artificial intelligence.",
+      "grammar_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "pronunciation_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "comparison_feedback": "\u274c HTTP error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat",
+      "rating": 2.1
+    }
+  ]
+}
