@@ -1,4 +1,3 @@
-# UI components for Speech Tutor application
 import gradio as gr
 import random
 from pathlib import Path
@@ -55,7 +54,7 @@ def create_ui(generate_question_and_answer, tutor_conversation, generate_intervi
         # Header with logo and tagline
         gr.HTML("""
         <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-            <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" alt="AI Logo" style="height: 80px; margin-right: 20px;">
+            <img src="https://via.placeholder.com/80" alt="AI Logo" style="height: 80px; margin-right: 20px;">
             <div>
                 <h1 style="text-align:center; font-size: 2.8em; background: linear-gradient(to right, #4F46E5, #2563EB); -webkit-background-clip: text; color: transparent; margin-bottom: 0;">VaakShakti AI</h1>
                 <h3 style="text-align:center; margin-top: 5px; color: #475569; font-weight: 400;">Sanskrit-Inspired AI for Mastering the Art of Speech</h3>
@@ -69,11 +68,11 @@ def create_ui(generate_question_and_answer, tutor_conversation, generate_intervi
         # Tabs for different features
         with gr.Tabs() as tabs:
             # Practice Tab
-            with gr.TabItem("🎯 Practice Speaking", id="practice"):
+            with gr.TabItem("Practice Speaking", id="practice"):
                 with gr.Row():
                     with gr.Column(scale=1):
-                        with gr.Box():
-                            gr.Markdown("### 🔍 Topic Selection")
+                        with gr.Box(style={"margin": "10px", "padding": "10px"}):
+                            gr.Markdown("### Topic Selection")
                             topic_choice = gr.Radio(
                                 ["Select from list", "Enter custom topic"], 
                                 value="Select from list", 
@@ -107,19 +106,19 @@ def create_ui(generate_question_and_answer, tutor_conversation, generate_intervi
                                 value="mistral:latest",
                                 label="AI Model"
                             )
-                            generate_btn = gr.Button("🎲 Generate Question", variant="primary")
+                            generate_btn = gr.Button("Generate Question", variant="primary")
 
-                        with gr.Box():
-                            gr.Markdown("### 🎤 Your Speaking Task")
+                        with gr.Box(style={"margin": "10px", "padding": "10px"}):
+                            gr.Markdown("### Your Speaking Task")
                             question_box = gr.Textbox(label="Your Question", interactive=False, placeholder="Your question will appear here or type directly when custom topic is selected")
                             ideal_answer_box = gr.Textbox(label="Ideal Answer Reference", interactive=False, visible=False)
                             
                             audio_input = gr.Audio(source="microphone", type="filepath", label="Record Your Answer")
-                            submit_btn = gr.Button("🚀 Analyze My Speech", variant="primary")
+                            submit_btn = gr.Button("Analyze My Speech", variant="primary")
 
                     with gr.Column(scale=1):
-                        with gr.Box():
-                            gr.Markdown("### � Performance Rating")
+                        with gr.Box(style={"margin": "10px", "padding": "10px"}):
+                            gr.Markdown("### Performance Rating")
                             rating_display = gr.HTML(format_star_rating(0.0))
                         
                         with gr.Accordion("Transcript", open=True):
@@ -138,7 +137,7 @@ def create_ui(generate_question_and_answer, tutor_conversation, generate_intervi
                             ideal_answer_display = gr.Textbox(label="AI Reference Answer")
 
             # Interview Prep Tab
-            with gr.TabItem("🎭 Interview Prep", id="interview"):
+            with gr.TabItem("Interview Preparation", id="interview"):
                 with gr.Row():
                     with gr.Column(scale=1):
                         interview_topic = gr.Textbox(label="Interview Topic/Position", placeholder="e.g., Software Engineer, Data Scientist, Marketing Manager")
@@ -155,7 +154,7 @@ def create_ui(generate_question_and_answer, tutor_conversation, generate_intervi
                         interview_questions = gr.Markdown("Your interview questions will appear here...")
 
             # History Tab
-            with gr.TabItem("📚 Your History", id="history"):
+            with gr.TabItem("Your History", id="history"):
                 with gr.Row():
                     with gr.Column(scale=1):
                         refresh_history_btn = gr.Button("Refresh History", variant="secondary")
@@ -226,7 +225,7 @@ def create_ui(generate_question_and_answer, tutor_conversation, generate_intervi
         # Enhanced tutor conversation with rating
         def enhanced_tutor_conversation(audio, question, ideal_answer, difficulty, model, user_id, topic):
             if not audio:
-                return "❌ No audio received", "", "", "", ideal_answer, 0.0, format_star_rating(0.0)
+                return "No audio received", "", "", "", ideal_answer, 0.0, format_star_rating(0.0)
 
             transcript, grammar_output, feedback_output, comparison = tutor_conversation(audio, question, ideal_answer, difficulty, model)
             
@@ -310,7 +309,6 @@ def create_ui(generate_question_and_answer, tutor_conversation, generate_intervi
 # Function to calculate star rating based on feedback
 def calculate_rating(transcript, grammar, feedback, comparison):
     # Simple algorithm to calculate rating between 1.0 and 5.0
-    # This can be made more sophisticated later
     if not transcript:
         return 0
     
